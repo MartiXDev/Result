@@ -1,13 +1,13 @@
 <Project>
 	<PropertyGroup>
-		<NetCoreFrameworks>net6.0;net7.0;net8.0</NetCoreFrameworks>
-		<TargetFrameworks>netstandard2.0;$(NetCoreFrameworks)</TargetFrameworks>
+		<NetCoreFrameworks>net8.0;net10.0</NetCoreFrameworks>
+		<TargetFrameworks>$(NetCoreFrameworks)</TargetFrameworks>
 		<LangVersion>latest</LangVersion>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Authors>Steve Smith (@ardalis); Shady Nagy (@ShadyNagy)</Authors>
-		<Company>Ardalis.com</Company>
-		<PackageProjectUrl>https://github.com/ardalis/result</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/ardalis/result</RepositoryUrl>
+		<Authors>Martin Mikeš</Authors>
+		<Company>MartiX.dev</Company>
+		<PackageProjectUrl>https://github.com/MartiXDev/Result</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/MartiXDev/Result</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>icon.png</PackageIcon>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>

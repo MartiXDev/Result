@@ -5,9 +5,9 @@ nav_order: 1
 has_children: false
 ---
 
-[![Ardalis.Result - NuGet](https://img.shields.io/nuget/v/Ardalis.Result.svg?label=Ardalis.Result%20-%20nuget)](https://www.nuget.org/packages/Ardalis.Result) [![NuGet](https://img.shields.io/nuget/dt/Ardalis.Result.svg)](https://www.nuget.org/packages/Ardalis.Result) [![Build Status](https://github.com/ardalis/Result/workflows/.NET%20Core/badge.svg)](https://github.com/ardalis/Result/actions?query=workflow%3A%22.NET+Core%22)
+[![MartiX.Result - NuGet](https://img.shields.io/nuget/v/MartiX.Result.svg?label=MartiX.Result%20-%20nuget)](https://www.nuget.org/packages/MartiX.Result) [![NuGet](https://img.shields.io/nuget/dt/MartiX.Result.svg)](https://www.nuget.org/packages/MartiX.Result) [![Build Status](https://github.com/ardalis/Result/workflows/.NET%20Core/badge.svg)](https://github.com/ardalis/Result/actions?query=workflow%3A%22.NET+Core%22)
 
-[![Ardails.Result.AspNetCore - NuGet](https://img.shields.io/nuget/v/Ardalis.Result.AspNetCore.svg?label=Ardalis.Result.AspNetCore%20-%20nuget)](https://www.nuget.org/packages/Ardalis.Result.AspNetCore) [![NuGet](https://img.shields.io/nuget/dt/Ardalis.Result.AspNetCore.svg)](https://www.nuget.org/packages/Ardalis.Result.AspNetCore) &nbsp; [![Ardails.Result.FluentValidation - NuGet](https://img.shields.io/nuget/v/Ardalis.Result.FluentValidation.svg?label=Ardalis.Result.FluentValidation%20-%20nuget)](https://www.nuget.org/packages/Ardalis.Result.FluentValidation) [![NuGet](https://img.shields.io/nuget/dt/Ardalis.Result.FluentValidation.svg)](https://www.nuget.org/packages/Ardalis.Result.FluentValidation)
+[![Ardails.Result.AspNetCore - NuGet](https://img.shields.io/nuget/v/MartiX.Result.AspNetCore.svg?label=MartiX.Result.AspNetCore%20-%20nuget)](https://www.nuget.org/packages/MartiX.Result.AspNetCore) [![NuGet](https://img.shields.io/nuget/dt/MartiX.Result.AspNetCore.svg)](https://www.nuget.org/packages/MartiX.Result.AspNetCore) &nbsp; [![Ardails.Result.FluentValidation - NuGet](https://img.shields.io/nuget/v/MartiX.Result.FluentValidation.svg?label=MartiX.Result.FluentValidation%20-%20nuget)](https://www.nuget.org/packages/MartiX.Result.FluentValidation) [![NuGet](https://img.shields.io/nuget/dt/MartiX.Result.FluentValidation.svg)](https://www.nuget.org/packages/MartiX.Result.FluentValidation)
 
 <a href="https://twitter.com/intent/follow?screen_name=ardalis">
     <img src="https://img.shields.io/twitter/follow/ardalis.svg?label=Follow%20@ardalis" alt="Follow @ardalis" />
@@ -21,7 +21,7 @@ A result abstraction that can be mapped to HTTP response codes if needed.
 
 ## Learn More
 
-* [Getting Started With Ardalis.Result](https://blog.nimblepros.com/blogs/getting-started-with-ardalis-result/)
+* [Getting Started With MartiX.Result](https://blog.nimblepros.com/blogs/getting-started-with-ardalis-result/)
 * [Transforming Results With the Map Method](https://blog.nimblepros.com/blogs/transforming-results-with-the-map-method/)
 * [Avoid Using Exceptions to Determine API Status Codes and Responses](https://ardalis.com/avoid-using-exceptions-determine-api-status/)
 
@@ -76,13 +76,13 @@ public async Task<ActionResult<CustomerDTO>> GetCustomer(int customerId)
 
 Another approach is to return a `Tuple` of the expected result along with other things, like a status code and additional failure mode metadata. While tuples can be great for individual, flexible responses, they're not as good for having a single, standard, reusable approach to a problem.
 
-The Result pattern provides a standard, reusable way to return both success as well as multiple kinds of non-success responses from .NET services in a way that can easily be mapped to API response types. Although the [Ardalis.Result](https://www.nuget.org/packages/Ardalis.Result/) package has no dependencies on ASP.NET Core and can be used from any .NET Core application, the [Ardalis.Result.AspNetCore](https://www.nuget.org/packages/Ardalis.Result.AspNetCore/) companion package includes resources to enhance the use of this pattern within ASP.NET Core web API applications.
+The Result pattern provides a standard, reusable way to return both success as well as multiple kinds of non-success responses from .NET services in a way that can easily be mapped to API response types. Although the [MartiX.Result](https://www.nuget.org/packages/MartiX.Result/) package has no dependencies on ASP.NET Core and can be used from any .NET Core application, the [MartiX.Result.AspNetCore](https://www.nuget.org/packages/MartiX.Result.AspNetCore/) companion package includes resources to enhance the use of this pattern within ASP.NET Core web API applications.
 
 ## Sample Usage
 
 ### Creating a Result
 
-The [sample folder](https://github.com/ardalis/Result/tree/main/sample/Ardalis.Result.SampleWeb) includes some examples of how to use the project. Here are a couple of simple uses.
+The [sample folder](https://github.com/ardalis/Result/tree/main/sample/MartiX.Result.SampleWeb) includes some examples of how to use the project. Here are a couple of simple uses.
 
 Imagine the snippet below is defined in a domain service that retrieves WeatherForecasts. When compared to the approach described above, this approach uses a result to handle common failure scenarios like missing data denoted as NotFound and or input validation errors denoted as Invalid. If execution is successful, the result will contain the random data generated by the final return statement.
 
@@ -145,7 +145,7 @@ public override ActionResult<IEnumerable<WeatherForecast>> Handle(ForecastReques
 
 ### Translating Results to Minimal API Results
 
-Similar to how the `ToActionResult` extension method translates `Ardalis.Results` to `ActionResults`, the `ToMinimalApiResult` translates results to the new `Microsoft.AspNetCore.Http.Results` `IResult` types in .NET 6+. The following code snippet demonstrates how one might use the domain service that returns a `Result<IEnumerable<WeatherForecast>>` and convert to a `Microsoft.AspNetCore.Http.Results` instance.
+Similar to how the `ToActionResult` extension method translates `MartiX.Results` to `ActionResults`, the `ToMinimalApiResult` translates results to the new `Microsoft.AspNetCore.Http.Results` `IResult` types in .NET 6+. The following code snippet demonstrates how one might use the domain service that returns a `Result<IEnumerable<WeatherForecast>>` and convert to a `Microsoft.AspNetCore.Http.Results` instance.
 
 ```csharp
 app.MapPost("/Forecast/New", (ForecastRequestDto request, WeatherService weatherService) =>
@@ -155,7 +155,7 @@ app.MapPost("/Forecast/New", (ForecastRequestDto request, WeatherService weather
 .WithName("NewWeatherForecast");
 ```
 
-The full Minimal API sample can be found in the [sample folder](https://github.com/ardalis/Result/tree/main/sample/Ardalis.Result.SampleMinimalApi/Program.cs).
+The full Minimal API sample can be found in the [sample folder](https://github.com/ardalis/Result/tree/main/sample/MartiX.Result.SampleMinimalApi/Program.cs).
 
 ### Mapping Results From One Type to Another
 
@@ -245,7 +245,7 @@ services.AddControllers(mvcOptions => mvcOptions
 
 ### Using Results with FluentValidation
 
-We can use Ardalis.Result.FluentValidation on a service with FluentValidation like that:
+We can use MartiX.Result.FluentValidation on a service with FluentValidation like that:
 
 ```csharp
 public async Task<Result<BlogCategory>> UpdateAsync(BlogCategory blogCategory)

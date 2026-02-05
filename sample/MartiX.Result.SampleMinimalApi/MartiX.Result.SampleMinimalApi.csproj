@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TargetFrameworks>$(NetCoreFrameworks)</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\MartiX.Result.AspNetCore\MartiX.Result.AspNetCore.csproj" />
+    <ProjectReference Include="..\MartiX.Result.Sample.Core\MartiX.Result.Sample.Core.csproj" />
+  </ItemGroup>
+
+</Project>

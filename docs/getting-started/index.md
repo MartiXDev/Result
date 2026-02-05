@@ -11,29 +11,29 @@ has_children: true
 
 To get started, you need to add the appropriate package(s) to your project from NuGet.
 
-[![Ardalis.Result - NuGet](https://img.shields.io/nuget/v/Ardalis.Result.svg?label=Ardalis.Result%20-%20nuget)](https://www.nuget.org/packages/Ardalis.Result) [![NuGet](https://img.shields.io/nuget/dt/Ardalis.Result.svg)](https://www.nuget.org/packages/Ardalis.Result) [![Build Status](https://github.com/ardalis/Result/workflows/.NET%20Core/badge.svg)](https://github.com/ardalis/Result/actions?query=workflow%3A%22.NET+Core%22)
+[![MartiX.Result - NuGet](https://img.shields.io/nuget/v/MartiX.Result.svg?label=MartiX.Result%20-%20nuget)](https://www.nuget.org/packages/MartiX.Result) [![NuGet](https://img.shields.io/nuget/dt/MartiX.Result.svg)](https://www.nuget.org/packages/MartiX.Result) [![Build Status](https://github.com/ardalis/Result/workflows/.NET%20Core/badge.svg)](https://github.com/ardalis/Result/actions?query=workflow%3A%22.NET+Core%22)
 
-[![Ardails.Result.AspNetCore - NuGet](https://img.shields.io/nuget/v/Ardalis.Result.AspNetCore.svg?label=Ardalis.Result.AspNetCore%20-%20nuget)](https://www.nuget.org/packages/Ardalis.Result.AspNetCore) [![NuGet](https://img.shields.io/nuget/dt/Ardalis.Result.AspNetCore.svg)](https://www.nuget.org/packages/Ardalis.Result.AspNetCore)
+[![Ardails.Result.AspNetCore - NuGet](https://img.shields.io/nuget/v/MartiX.Result.AspNetCore.svg?label=MartiX.Result.AspNetCore%20-%20nuget)](https://www.nuget.org/packages/MartiX.Result.AspNetCore) [![NuGet](https://img.shields.io/nuget/dt/MartiX.Result.AspNetCore.svg)](https://www.nuget.org/packages/MartiX.Result.AspNetCore)
 
-[![Ardails.Result.FluentValidation - NuGet](https://img.shields.io/nuget/v/Ardalis.Result.FluentValidation.svg?label=Ardalis.Result.FluentValidation%20-%20nuget)](https://www.nuget.org/packages/Ardalis.Result.FluentValidation) [![NuGet](https://img.shields.io/nuget/dt/Ardalis.Result.FluentValidation.svg)](https://www.nuget.org/packages/Ardalis.Result.FluentValidation)
+[![Ardails.Result.FluentValidation - NuGet](https://img.shields.io/nuget/v/MartiX.Result.FluentValidation.svg?label=MartiX.Result.FluentValidation%20-%20nuget)](https://www.nuget.org/packages/MartiX.Result.FluentValidation) [![NuGet](https://img.shields.io/nuget/dt/MartiX.Result.FluentValidation.svg)](https://www.nuget.org/packages/MartiX.Result.FluentValidation)
 
 ```bash
-dotnet add package Ardalis.Result
+dotnet add package MartiX.Result
 ```
 
 ```bash
-dotnet add package Ardalis.Result.AspNetCore
+dotnet add package MartiX.Result.AspNetCore
 ```
 
 ```bash
-dotnet add package Ardalis.Result.FluentValidation
+dotnet add package MartiX.Result.FluentValidation
 ```
 
-The base `Ardalis.Result` package includes all of the functionality and types needed for use in your domain model or business services. It has no dependency on any third party libraries or UI frameworks.
+The base `MartiX.Result` package includes all of the functionality and types needed for use in your domain model or business services. It has no dependency on any third party libraries or UI frameworks.
 
-The `Ardalis.Result.AspNetCore` package includes helpers that can be used to map from `Ardalis.Result` types to `ASP.NET Core` `ActionResult` and `IResult` types used by Controller-based APIs and Minimal APIs.
+The `MartiX.Result.AspNetCore` package includes helpers that can be used to map from `MartiX.Result` types to `ASP.NET Core` `ActionResult` and `IResult` types used by Controller-based APIs and Minimal APIs.
 
-The `Ardalis.Result.FluentValidation` package is used to allow for easy integration with the [`FluentValidation`](https://www.nuget.org/packages/FluentValidation) package and its validation error types.
+The `MartiX.Result.FluentValidation` package is used to allow for easy integration with the [`FluentValidation`](https://www.nuget.org/packages/FluentValidation) package and its validation error types.
 
 ## Returning a Result
 

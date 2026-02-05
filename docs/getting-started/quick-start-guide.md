@@ -7,7 +7,7 @@ nav_order: 1
 
 # Getting Started
 
-If you're building an ASP.NET Core Web API you can simply install the [Ardalis.Result.AspNetCore](https://www.nuget.org/packages/Ardalis.Result.AspNetCore/) package to get started. Then, apply the `[TranslateResultToActionResult]` attribute to any actions or controllers that you want to automatically translate from Result types to ActionResult types.
+If you're building an ASP.NET Core Web API you can simply install the [MartiX.Result.AspNetCore](https://www.nuget.org/packages/MartiX.Result.AspNetCore/) package to get started. Then, apply the `[TranslateResultToActionResult]` attribute to any actions or controllers that you want to automatically translate from Result types to ActionResult types.
 
 ## Minimal API Example
 
@@ -26,7 +26,7 @@ Add the `[[TranslateResultToActionResult]` attribute to action methods to perfor
 
 ```csharp
 /// <summary>
-/// This uses a filter to convert an Ardalis.Result return type to an ActionResult.
+/// This uses a filter to convert an MartiX.Result return type to an ActionResult.
 /// This filter could be used per controller or globally!
 /// </summary>
 /// <returns></returns>
@@ -39,7 +39,7 @@ public Result RemovePerson(int id)
 }
 
 /// <summary>
-/// This uses a filter to convert an Ardalis.Result return type to an ActionResult.
+/// This uses a filter to convert an MartiX.Result return type to an ActionResult.
 /// This filter could be used per controller or globally!
 /// </summary>
 /// <returns></returns>
