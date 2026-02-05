@@ -9,7 +9,7 @@
 		<PackageReleaseNotes>
 		</PackageReleaseNotes>
 		<AssemblyName>MartiX.Result.FluentAssertions</AssemblyName>
-		<Version>1.0.0</Version>
+		<Version>10.1.0</Version>
 	</PropertyGroup>
 
 
@@ -19,7 +19,7 @@
 
 
 	<ItemGroup>
-	  <PackageReference Include="FluentAssertions" />
+		<PackageReference Include="FluentAssertions" />
 	</ItemGroup>
 
 	<ItemGroup>

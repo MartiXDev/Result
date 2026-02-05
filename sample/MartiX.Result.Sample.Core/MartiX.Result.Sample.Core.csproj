@@ -3,6 +3,7 @@
 	<PropertyGroup>
 		<AssemblyName>MartiX.Result.Sample.Core</AssemblyName>
 		<RootNamespace>MartiX.Result.Sample.Core</RootNamespace>
+		<Version>10.1.0</Version>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -12,7 +13,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\MartiX.Result.FluentValidation\MartiX.Result.FluentValidation.csproj" />
+		<ProjectReference
+			Include="..\..\src\MartiX.Result.FluentValidation\MartiX.Result.FluentValidation.csproj" />
 		<ProjectReference Include="..\..\src\MartiX.Result\MartiX.Result.csproj" />
 	</ItemGroup>
 </Project>
